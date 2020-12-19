@@ -28,7 +28,7 @@
 </body>
 
 <footer>
-    <nav class="navbar fixed-bottom navbar-light bg-light">
+    <nav class="navbar fixed-bottom">
         <div class="container-fluid">
 
             <!-- Default dropup button -->
