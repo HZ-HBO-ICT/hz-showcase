@@ -14,6 +14,5 @@ class RequestController extends Controller
             'Authorization' => 'Bearer ' . env("AIRTABLE_API_KEY"),
         ])->get('https://api.airtable.com/v0/appsxUWtKODuadN4y/showcase'
         )->json();
-        dd($response);
     }
 }
