@@ -16,7 +16,7 @@
             <a href="#">
                 <img src="/img/hzlogovolTranspirant.png" alt="" height="80" width="auto">
             </a>
-            <h1 class="position-absolutes" style="font-size: 28px">HZ Showcase</h1>
+            <h1 class="navbar-text">HZ Showcase</h1>
         </div>
     </nav>
 

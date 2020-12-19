@@ -10921,3 +10921,10 @@ body {
   color: white;
 }
 
+.navbar-text {
+  position: absolute;
+  font-size: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
