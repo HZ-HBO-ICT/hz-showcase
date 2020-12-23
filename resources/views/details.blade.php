@@ -2,9 +2,9 @@
 
 @section('content')
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-            crossorigin="anonymous"></script>
+{{--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"--}}
+{{--            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"--}}
+{{--            crossorigin="anonymous"></script>--}}
 
 
     <div class="card card-border-base card-itself"
@@ -28,7 +28,7 @@
                     <div class="card card-body card-border" style="width:50%">
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                     </div>
-                    <button type="button" class="btn-close" aria-label="Close" style="width: 20px; height: 20px"></button>
+                    <button type="button" class="close-btn"><span><img class="close-btn-size" src="img/close.png"></span></button>
                 </div>
             </div>
             <div class="card-body ">

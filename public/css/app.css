@@ -10910,6 +10910,7 @@ a.text-dark:focus {
 
 body {
   background-color: #F8F9FA;
+  color: #333333;
 }
 
 .btn {
@@ -10950,5 +10951,20 @@ body {
   border-top-right-radius: calc(0.50rem - 1px);
   border-bottom-left-radius: calc(0.50rem - 1px);
   border-bottom-right-radius: calc(0.50rem - 1px);
+}
+
+.close-btn {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  left: 101%;
+  transform: translateX(-101%);
+}
+
+.close-btn-size {
+  height: auto;
+  width: 22px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
