@@ -2,6 +2,7 @@
 
 @section('content')
 
+
     <div class="card card-border-base card-itself"
          style="margin-left: 2%; margin-right: 2%; margin-bottom: 1%; margin-top: 1% ">
         <div class="card">
@@ -24,6 +25,8 @@
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                     </div>
                        </div>
+                    <button type="button" class="close-btn"><span><img class="close-btn-size" src="img/close.png"></span></button>
+                </div>
             </div>
             <div class="card-body ">
                 <div class="card card-group " style="margin-top: -2%">
