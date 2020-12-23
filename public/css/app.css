@@ -10946,9 +10946,10 @@ body {
 }
 
 .card-itself {
-  border-top-left-radius: calc(0.50rem - 1px);
-  border-top-right-radius: calc(0.50rem - 1px);
-  border-bottom-left-radius: calc(0.50rem - 1px);
-  border-bottom-right-radius: calc(0.50rem - 1px);
+  border-radius: calc(0.50rem - 1px);
+}
+
+.btn-close {
+  background-image: image("public/img/close2.gif") !important;
 }
 
