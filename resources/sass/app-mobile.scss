@@ -1,0 +1,19 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+$enable-negative-margins: true;
+
+
+.navbar-text-m {
+    position: absolute;
+    font-size: 19px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
