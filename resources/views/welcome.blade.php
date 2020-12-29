@@ -61,7 +61,7 @@
         <h2 class="header">Nieuwe projecten</h2>
     </div>
     <hr>
-    
+
     <main class="flex-center">
 
         <div class="">
