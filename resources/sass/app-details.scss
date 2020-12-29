@@ -1,0 +1,66 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+.close-btn {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    left: 101%;
+    transform: translateX(-101%);
+}
+
+.close-btn-size {
+    height: auto;
+    width: 22px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.btn-opties {
+    background: #0078CC !important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+    border-radius: 10px !important;
+    width: 15vw;
+    //text-align: center !important;
+    margin: auto !important;
+}
+
+.card-input-first-row{
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-top: -2px;
+}
+
+.picture-project{
+    width:50%;
+    margin-bottom: 2%;
+    //text-align: center !important;
+    //margin: auto !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-name{
+    text-align: center;
+}
+
+.description-project{
+    margin-bottom: -1px;
+}
+
+.card-input-description-long {
+    margin-top: -2%;
+}
+
+.card-position-bottom-row{
+    margin-top: -2%;
+    align-content:center !important;
+    margin-bottom: -15px;
+}
