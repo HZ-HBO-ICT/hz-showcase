@@ -13,8 +13,8 @@ class AgentServiceProvider extends ServiceProvider
         $agent = new Agent();
 
         View::share('agent', $agent);
-    }
 
+    }
     public function register()
     {
         //
