@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use app\Http\Controllers\RequestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-    Route::get('/dd', 'RequestController@index');
+Route::get('/dd', 'RequestController@index');
 
-    Route::get('/', function () {
-        return view('welcome');
-    } );
+//Route::get('/', function () {
+//    return view('welcome', [ 'records' =>  ]);
+//});
 
-    Route::get('details', function () {
-        return view('details');
-    } );
+Route::get('/', 'RequestController@index');
 
+Route::get('details', function () {
+    return view('details');
+});
