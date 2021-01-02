@@ -1,8 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-
-
+m
     <div class="card card-border-main card-main">
         <div class="card card-border">
             <div class="card-body card-border card-input-first-row">
@@ -11,9 +10,8 @@
                         <img src="img/mockup_pictuers.PNG" style="width: 80%">
                     </div>
                     <div class="card card-body card-border card-input-center">
-                        <h1 class="card-text" class="project-name" style="text-align: center">NAAM PROJECT</h1>
+                        <h1 class="card-text" class="project-name" style="text-align: center">Project name: </h1> {{ $Showcase->projectName }}
                         <p class="card-text" class="description-project" style="margin-top:5px">- xste jaars</p>
-                        <p class="card-text" class="description-project">- Externe/ opdrachtgever(s)</p>
                         <p class="card-text" class="description-project">- Belangrijke termen</p>
                         <p class="card-text" style="padding-bottom: -1px">- Uitgevoerd in schooljaar</p>
 
