@@ -22,6 +22,8 @@ Route::get('/dd', 'RequestController@index');
 
 Route::get('/', 'RequestController@index');
 
-Route::get('details', function () {
-    return view('details');
-});
+Route::get('details', 'RequestController@index2');
+
+//Route::get('details', function () {
+//    return view('details');
+//});
