@@ -14,13 +14,14 @@ use app\Http\Controllers\RequestController;
 |
 */
 
-Route::get('/dd', 'RequestController@index');
+Route::get('/dd', 'RequestController@dd');
 
 //Route::get('/', function () {
 //    return view('welcome', [ 'records' =>  ]);
 //});
 
 Route::get('/', 'RequestController@index');
+
 
 Route::get('details', 'RequestController@index2');
 

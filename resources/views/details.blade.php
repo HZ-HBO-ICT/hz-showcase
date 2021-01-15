@@ -24,7 +24,9 @@
                     <div class="card card-body card-border card-input-center">
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                     </div>
-                    <a href="/"><button type="button" class="close-btn"><img class="close-btn-size" src="img/close.png"></button></a>
+
+                    <button type="button" class="close-btn"><img class="close-btn-size"
+                                                                       src="img/close.png"></button>
                 </div>
             </div>
         </div>
