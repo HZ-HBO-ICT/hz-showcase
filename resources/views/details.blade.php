@@ -11,12 +11,14 @@
                     </div>
                     <div class="card card-body card-border card-input-center">
                         <h1 class="card-text" class="project-name" style="text-align: center">{{ $response['0']['fields']['projectName'] }}</h1>
-                        <p class="card-text" class="description-project" style="margin-top:5px">- {{ $response['0']['fields']['schoolYear']['0'] }} , {{ $response['0']['fields']['schoolYear']['1'] }}
+                        <p class="card-text" class="description-project" style="margin-top:5px"><span class="font-weight-bold">Schoolyear: </span>@foreach($response['0']['fields']['schoolYear'] as $tag)
+                             <span class="schoolYearTag">{{$tag}}</span>
+                            @endforeach
                         </p>
-                        <p class="card-text" class="description-project">- {{ $response['0']['fields']['client'] }}</p>
-                        <p class="card-text" style="padding-bottom: -1px">- {{ $response['0']['fields']['year'] }}</p>
+                        <p class="card-text" class="description-project"><span class="font-weight-bold">Client: </span>{{ $response['0']['fields']['client'] }}</p>
+                        <p class="card-text" style="padding-bottom: -1px"><span class="font-weight-bold">Year: </span>{{ $response['0']['fields']['year'] }}</p>
 
-                        <p class="card-text" class="description-project" style="margin-top: 4px">Uitgevoerd door:</p>
+                        <p class="card-text" class="description-project" style="margin-top: 4px"><span class="font-weight-bold">Written by: </span></p>
                         <p class="card-text" class="description-project">- {{ $response['0']['fields']['projectMembers'] }} </p>
                     </div>
                     <div class="card card-body card-border card-input-center">
@@ -33,18 +35,20 @@
                 </div>
             </div>
         </div>
-
-{{--        //TO DO: uitzoeken wat het moet zijn en waar naartoe--}}
         <div class="card-body card-border">
             <div class="card card-group card-border card-position-bottom-row">
                 <div class="card card-body card-border card-input-center">
-                    <a href="#" class="btn btn-primary btn-opties">Algemene informatie</a>
+
+                    //TODO: knop naar popup naar: wat is de opdracht en wat werd er verwacht
+                    <a href="#" class="btn btn-primary btn-opties">General information</a>
                 </div>
                 <div class="card card-body card-border card-input-center">
-                    <a href="#" class="btn btn-primary btn-opties">Naar project</a>
-                </div>
-                <div class="card card-body card-border card-input-center">
+
+                    //TODO: mail van hz -> ict@hz.nl (miss naar contact pagina)
                     <a href="#" class="btn btn-primary btn-opties">Contact</a>
+                </div>
+                <div class="card card-body card-border card-input-center">
+                    <a class="btn btn-primary btn-opties" href="https://hz.nl/opleidingen/hbo-ict" >More information</a>
                 </div>
             </div>
         </div>
