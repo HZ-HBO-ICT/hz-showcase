@@ -13,8 +13,8 @@
             <div class="card" style="width: 33rem;">
                 <img style="width: 40%;" src="{{ $records['fields']['projectLogo']['0']['url'] }}">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5 class="card-title">{{ $records['fields']['projectName'] }}</h5>
+                    <p class="card-text">{{ $records['fields']['shortDescription'] }}</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
