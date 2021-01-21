@@ -12,6 +12,10 @@
 
 $enable-negative-margins: true;
 
+$hzcolor: #0078CC;
+$textcolor: #333333;
+
+
 
 .navbar {
     background-color: #ffffff;
@@ -88,4 +92,19 @@ hr {
 .logo-position {
     margin-left: 15px;
 
+}
+
+.logo-image-padding {
+    padding: 5px 0px 0px 0px;
+}
+
+.card-invisible {
+    background-color: transparent !important;
+    border: 0px !important;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color: $textcolor;
 }
