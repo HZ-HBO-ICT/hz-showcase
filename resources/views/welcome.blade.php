@@ -5,9 +5,10 @@
     {{--  DONE: Mobile integration --}}
     {{--  DONE: Alles dynamisch ophalen --}}
     {{--  DONE: Card template in grote lijnen --}}
-    {{--  TODO: Cards clickable maken  --}}
-    {{--  TODO: Routing naar de details --}}
-    {{--  TODO: --}}
+    {{--  DONE: Cards clickable maken  --}}
+    {{--  DONE: Mobiele integratie van de carousel  --}}
+    {{--  TODO: Routing naar de details (show-functie is opgezet in RequestController, helaas nog niet werkend --}}
+    {{--  TODO: Design van de kaarten optimaliseren --}}
 
 
 
