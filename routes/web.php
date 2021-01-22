@@ -23,7 +23,7 @@ Route::get('/dd', 'RequestController@dd');
 Route::get('/', 'RequestController@index');
 
 
-Route::get('/details/{record}', 'RequestController@show');
+Route::get('/details/{id}', 'RequestController@show');
 
 //Route::get('details', function () {
 //    return view('details');

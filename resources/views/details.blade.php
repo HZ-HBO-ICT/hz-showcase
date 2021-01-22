@@ -1,59 +1,49 @@
 @extends('layouts.layout')
 
 @section('content')
-{{--    <script type="text/javascript">--}}
-{{--        // string url = HttpContext.Current.Request.Url.AbsoluteUri;--}}
-{{--        let currentLocation = window.location.pathname;--}}
-{{--        let idRecord = currentLocation.slice(9);--}}
-{{--        console.log(idRecord)--}}
 
-{{--    </script>--}}
-
-{{--    @php--}}
-{{--        $curPageName = $_SERVER['REQUEST_URI'];--}}
-{{--        $newString = substr($curPageName, 9);--}}
-{{--        $recordId  = $newString(true);--}}
-{{--    @endphp--}}
-
-
-{{--    @foreach($response as $records)--}}
-{{--    @foreach(($recordId = $_SERVER['REQUEST_URI'].ltrim($recordId ?? '', 9)) as $records['id'])--}}
-        <div class="card card-border-main card-main">
+    <div class="card card-border-main card-main">
         <div class="card card-border">
             <div class="card-body card-border card-input-first-row">
                 <div class="card card-group card-border">
                     <div class="card card-body card-border picture-project">
-                        <img src={{ $response['0']['fields']['projectLogo']['0']['url']  }} class="pictures" >
+
+                        <div class="owl-carousel">
+                            @foreach($response['fields']['image'] as $records)
+                                <div><img src="{{ $records['url'] }}" ></div>
+                            @endforeach
+                        </div>
+
                     </div>
                     <div class="card card-body card-border card-input-center">
-                        <h1 class="card-text" class="project-name" style="text-align: center">{{ $response['0']['fields']['projectName'] }}</h1>
-                        <p class="card-text" class="description-project" style="margin-top:5px"><span class="font-weight-bold">Schoolyear:
-                            </span>@foreach($response['0']['fields']['schoolYear'] as $tag)
-                             <span class="schoolYearTag">{{$tag}}</span>
-                            @endforeach
-                        </p>
-                        <p class="card-text" class="description-project"><span class="font-weight-bold">Client: </span>{{ $response['0']['fields']['client'] }}</p>
-                        <p class="card-text" style="padding-bottom: -1px"><span class="font-weight-bold">Year: </span>{{ $response['0']['fields']['year'] }}</p>
+                        <h1 class="card-text" class="project-name" style="text-align: center">{{ $response['fields']['projectName'] }}</h1>
+                        <p class="card-text" class="description-project" style="margin-top:5px"></p>
+                        <p class="card-text" class="description-project"></p>
+                        <p class="card-text" style="padding-bottom: -1px"></p>
 
-                        <p class="card-text" class="description-project" style="margin-top: 4px"><span class="font-weight-bold">Written by: </span></p>
+                        <p class="card-text" class="description-project" style="margin-top: 4px">Uitgevoerd door:</p>
                         <p class="card-text" class="description-project">- {{ $response['0']['fields']['projectMembers'] }} </p>
                     </div>
                     <div class="card card-body card-border card-input-center">
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                     </div>
 
-                    <button type="button" class="close-btn"><img class="close-btn-size"
-                                                                       src="img/close.png"></button>
+                    <a href="{{ url()->previous() }}"><button type="button" class="close-btn"><img class="close-btn-size"
+                                                                       src="/img/close.png"></button></a>
                 </div>
             </div>
         </div>
         <div class="card-body ">
             <div class="card card-group card-input-description-long">
                 <div class="card card-body card-input-center">
-                    <p class="card-text">{{ $response['0']['fields']['description'] }}</p>
+                    <p class="card-text"></p>
                 </div>
             </div>
         </div>
+
+{{--   TODO: uitzoeken wat het moet zijn en waar naartoe--}}
+
+
         <div class="card-body card-border">
             <div class="card card-group card-border card-position-bottom-row">
                 <div class="card card-body card-border card-input-center">
@@ -72,8 +62,30 @@
             </div>
         </div>
     </div>
-{{--    @endforeach--}}
-{{--    @endforeach--}}
+
+    <script>
+        jQuery(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+
+                number: 3,
+                mouseDrag: false,
+                margin: 25,
+                dots: false,
+                navText: ["<img class='arrow' src='/img/left-arrow.png' ></i>", "<img class='arrow' src='/img/right-arrow.png'>"],
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    // 600: {
+                    //     items: 3
+                    // },
+                }
+            })
+        });
+
+    </script>
+
 
 @endsection
 

@@ -31,13 +31,17 @@ class RequestController extends Controller
         @dd($response);
     }
 
-    public function show() {
+    public function show($id) {
+
+        //Http::get("https://api.airtable.com");
+
         $response = Http::withHeaders([
             'Authorization' => 'Bearer ' . env("AIRTABLE_API_KEY"),
-        ])->get('https://api.airtable.com/v0/appsxUWtKODuadN4y/showcase/'
+        ])->get('https://api.airtable.com/v0/appsxUWtKODuadN4y/showcase/' . $id
         )->json();
 
-        return view("details", ['response' => $response['records']]);
-    }
 
+        return view("details", ['response' => $response]);
+
+        }
 }
