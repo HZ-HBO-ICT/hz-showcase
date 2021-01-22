@@ -1,8 +1,24 @@
 @extends('layouts.layout')
 
 @section('content')
+{{--    <script type="text/javascript">--}}
+{{--        // string url = HttpContext.Current.Request.Url.AbsoluteUri;--}}
+{{--        let currentLocation = window.location.pathname;--}}
+{{--        let idRecord = currentLocation.slice(9);--}}
+{{--        console.log(idRecord)--}}
 
-    <div class="card card-border-main card-main">
+{{--    </script>--}}
+
+{{--    @php--}}
+{{--        $curPageName = $_SERVER['REQUEST_URI'];--}}
+{{--        $newString = substr($curPageName, 9);--}}
+{{--        $recordId  = $newString(true);--}}
+{{--    @endphp--}}
+
+
+{{--    @foreach($response as $records)--}}
+{{--    @foreach(($recordId = $_SERVER['REQUEST_URI'].ltrim($recordId ?? '', 9)) as $records['id'])--}}
+        <div class="card card-border-main card-main">
         <div class="card card-border">
             <div class="card-body card-border card-input-first-row">
                 <div class="card card-group card-border">
@@ -11,7 +27,8 @@
                     </div>
                     <div class="card card-body card-border card-input-center">
                         <h1 class="card-text" class="project-name" style="text-align: center">{{ $response['0']['fields']['projectName'] }}</h1>
-                        <p class="card-text" class="description-project" style="margin-top:5px"><span class="font-weight-bold">Schoolyear: </span>@foreach($response['0']['fields']['schoolYear'] as $tag)
+                        <p class="card-text" class="description-project" style="margin-top:5px"><span class="font-weight-bold">Schoolyear:
+                            </span>@foreach($response['0']['fields']['schoolYear'] as $tag)
                              <span class="schoolYearTag">{{$tag}}</span>
                             @endforeach
                         </p>
@@ -41,13 +58,13 @@
             <div class="card card-group card-border card-position-bottom-row">
                 <div class="card card-body card-border card-input-center">
 
-                    //TODO: knop naar popup naar: wat is de opdracht en wat werd er verwacht
+{{--                    //TODO: knop naar popup naar: wat is de opdracht en wat werd er verwacht--}}
                     <a href="#" class="btn btn-primary btn-opties">General information</a>
                 </div>
                 <div class="card card-body card-border card-input-center">
 
-                    //TODO: mail van hz -> ict@hz.nl (miss naar contact pagina)
-                    <a href="#" class="btn btn-primary btn-opties">Contact</a>
+{{--                    //TODO: mail van hz -> ict@hz.nl (miss naar contact pagina)--}}
+                    <a href="#" class="btn btn-primary btn-opties">More information about ict</a>
                 </div>
                 <div class="card card-body card-border card-input-center">
                     <a class="btn btn-primary btn-opties" href="https://hz.nl/opleidingen/hbo-ict" >More information</a>
@@ -55,7 +72,8 @@
             </div>
         </div>
     </div>
-
+{{--    @endforeach--}}
+{{--    @endforeach--}}
 
 @endsection
 

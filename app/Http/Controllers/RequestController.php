@@ -20,20 +20,6 @@ class RequestController extends Controller
         return view("welcome", ['response' => $response['records']]);
     }
 
-    public function index2()
-    {
-        //Http::get("https://api.airtable.com");
-
-        $response = Http::withHeaders([
-            'Authorization' => 'Bearer ' . env("AIRTABLE_API_KEY"),
-        ])->get('https://api.airtable.com/v0/appsxUWtKODuadN4y/showcase'
-        )->json();
-//        @dd($response);
-//       return view("welcome", ['response' => $response['records']]);
-        return view("details", ['response' => $response['records']]);
-    }
-
-
     public function dd()
     {
         //Http::get("https://api.airtable.com");
@@ -44,4 +30,14 @@ class RequestController extends Controller
         )->json();
         @dd($response);
     }
+
+    public function show() {
+        $response = Http::withHeaders([
+            'Authorization' => 'Bearer ' . env("AIRTABLE_API_KEY"),
+        ])->get('https://api.airtable.com/v0/appsxUWtKODuadN4y/showcase/'
+        )->json();
+
+        return view("details", ['response' => $response['records']]);
+    }
+
 }
