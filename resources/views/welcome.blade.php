@@ -7,8 +7,13 @@
     {{--  DONE: Card template in grote lijnen --}}
     {{--  DONE: Cards clickable maken  --}}
     {{--  DONE: Mobiele integratie van de carousel  --}}
+    {{--  DONE: Styling omzetten naar ID's in een aparte scss  --}}
+
     {{--  TODO: Routing naar de details (show-functie is opgezet in RequestController, helaas nog niet werkend --}}
-    {{--  TODO: Design van de kaarten optimaliseren --}}
+    {{--  TODO: Design van de kaarten optimaliseren / friendlier voor (andere) schermen maken --}}
+    {{--  TODO: Filter function --}}
+    {{--  TODO: Tablet integration? --}}
+    {{--  TODO: Tags kleuren geven (amber heeft de code) --}}
 
 
 
@@ -20,32 +25,31 @@
     <div class="card card-invisible" style="margin-left: 2%; margin-right: 2%;">
         <div class="owl-carousel owl-theme">
             @foreach($response as $records)
-                <a href="/details/{{ $records['id'] }}">
                 <div class="card mb-3" style="border-radius: 5px; padding-left: 5px;">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <div>
-                                <img class="logo-image-padding" style="width: 22vh; height: auto;"
+                                <img class="logo-image-padding" id="img"
                                      src="{{ $records['fields']['projectLogo']['0']['url'] }}">
                             </div>
-                            <p class="text-muted" style="width: 22vh; padding-top: 10px;">
+                            <p class="text-muted" id="year">
                                 - {{ $records['fields']['year'] }}</p>
-                            <p class="text-muted" style="font-size: 12px; width: 22vh;">
+                            <p class="text-muted client" id="client">
                                 - {{ $records['fields']['client'] }}</p>
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title"
-                                    style="font-weight: bold">{{ $records['fields']['projectName'] }}</h5>
-                                <p class="text-muted"
-                                   style="font-size: 12px">{{ $records['fields']['projectMembers'] }}</p>
-                                <p class="card-text"
-                                   style="font-size: 15px">{{ $records['fields']['shortDescription'] }}.</p>
+                                <a href="/details/{{ $records['id'] }}">
+                                    <h5 class="card-title" id="projectname"
+                                    >{{ $records['fields']['projectName'] }}</h5></a>
+                                <p class="text-muted" id="projectmembers"
+                                >{{ $records['fields']['projectMembers'] }}</p>
+                                <p class="card-text" id="shortdescription"
+                                >{{ $records['fields']['shortDescription'] }}.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                </a>
             @endforeach
         </div>
     </div>
@@ -60,17 +64,16 @@
     {{--  TODO: Add the second carousel  --}}
 
 
-
-
-
     <script>
         jQuery(document).ready(function () {
             $('.owl-carousel').owlCarousel({
+
                 number: 3,
                 mouseDrag: false,
                 margin: 25,
-                dots: true,
-                nav: false,
+                dots: false,
+                navText: ["<img class='arrow' src='/img/left-arrow.png' ></i>", "<img class='arrow' src='/img/right-arrow.png'>"],
+                nav: true,
                 responsive: {
                     0: {
                         items: 1
@@ -79,8 +82,9 @@
                         items: 3
                     },
                 }
-            });
+            })
         });
+
     </script>
 
 @endsection

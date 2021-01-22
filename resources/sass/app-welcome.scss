@@ -1,0 +1,41 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+$enable-negative-margins: true;
+
+$hzcolor: #0078CC;
+$textcolor: #333333;
+
+
+#img {
+    width: 22vh;
+    height: auto;
+}
+
+#year {
+    width: 22vh;
+    padding-top: 10px;
+}
+
+#client {
+    font-size: 12px;
+    width: 22vh;
+}
+
+#projectname {
+    font-weight: bold;
+}
+
+#projectmembers {
+    font-size: 12px;
+}
+
+#shortdescription {
+    font-size: 15px;
+}

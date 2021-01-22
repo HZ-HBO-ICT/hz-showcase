@@ -1,5 +1,6 @@
 @use "app-mobile";
 @use "app-details";
+@use "app-welcome";
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
@@ -103,8 +104,18 @@ hr {
     border: 0px !important;
 }
 
-a:hover, a:visited, a:link, a:active
+ a:visited, a:active, a:link
 {
     text-decoration: none;
     color: $textcolor;
 }
+
+ a:hover {
+     text-decoration: underline;
+ }
+
+.arrow {
+    width: 50px;
+}
+
+
