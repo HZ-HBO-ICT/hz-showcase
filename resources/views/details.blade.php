@@ -1,31 +1,55 @@
 @extends('layouts.layout')
 
 @section('content')
+    <script language="javascript" type="text/javascript">
+        let linkje ="{{ $response['fields']['projectURL'] }}";
+        console.log(linkje);
 
+        function togglePopup(){
+            document.getElementById("popup-1").classList.toggle("active");
+        }
+    </script>
     <div class="card card-border-main card-main">
         <div class="card card-border">
             <div class="card-body card-border card-input-first-row">
                 <div class="card card-group card-border">
-                    <div class="card card-body card-border picture-project">
-
-                        <div class="owl-carousel">
+                    <div class="card card-body card-border">
+                        <div class="owl-carousel owl-theme" style="margin-bottom: -50px">
                             @foreach($response['fields']['image'] as $records)
-                                <div><img src="{{ $records['url'] }}" ></div>
+                                <div class="inner">
+                                    <img style="height: 10vw; width: auto;" class="picture-project-carousel" src="{{ $records['url'] }}" >
+                                </div>
+
                             @endforeach
                         </div>
-
                     </div>
                     <div class="card card-body card-border card-input-center">
                         <h1 class="card-text" class="project-name" style="text-align: center">{{ $response['fields']['projectName'] }}</h1>
-                        <p class="card-text" class="description-project" style="margin-top:5px"></p>
-                        <p class="card-text" class="description-project"></p>
-                        <p class="card-text" style="padding-bottom: -1px"></p>
+                        <p class="card-text" class="description-project" style="margin-top:5px">Schoolyear:
+                        @foreach($response['fields']['schoolYear'] as $records)
+                                <span class="schoolYearTag">{{ $records }}</span>
+                            @endforeach
+                        </p>
+
+                        <p class="card-text" class="description-project">Client: {{ $response['fields']['client'] }}</p>
+                        <p class="card-text" style="padding-bottom: -1px">Year: {{ $response['fields']['year'] }}</p>
 
                         <p class="card-text" class="description-project" style="margin-top: 4px">Uitgevoerd door:</p>
-                        <p class="card-text" class="description-project">- {{ $response['0']['fields']['projectMembers'] }} </p>
+                        <p class="card-text" class="description-project">- {{ $response['fields']['projectMembers'] }} </p>
                     </div>
+
                     <div class="card card-body card-border card-input-center">
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text" class="description-project" style="margin-top:5px">First labels:
+                            @foreach($response['fields']['primaryLabel'] as $records)
+                                <span class="schoolYearTag">{{ $records }}</span>
+                            @endforeach
+                        </p>
+
+                        <p class="card-text" class="description-project" style="margin-top:5px">Secondairy lables:
+                            @foreach($response['fields']['secondaryLabel'] as $records)
+                                <span class="schoolYearTag">{{ $records }}</span>
+                            @endforeach
+                        </p>
                     </div>
 
                     <a href="{{ url()->previous() }}"><button type="button" class="close-btn"><img class="close-btn-size"
@@ -34,9 +58,9 @@
             </div>
         </div>
         <div class="card-body ">
-            <div class="card card-group card-input-description-long">
-                <div class="card card-body card-input-center">
-                    <p class="card-text"></p>
+            <div class="card card-group">
+                <div class="card card-body card-input-center card-input-description-long">
+                    <p class="card-text ">{{ $response['fields']['description'] }}</p>
                 </div>
             </div>
         </div>
@@ -49,15 +73,31 @@
                 <div class="card card-body card-border card-input-center">
 
 {{--                    //TODO: knop naar popup naar: wat is de opdracht en wat werd er verwacht--}}
-                    <a href="#" class="btn btn-primary btn-opties">General information</a>
+{{--                    <a href="#" class="btn btn-primary btn-opties ">Project assigment</a>--}}
+                        <div class="popup" id="popup-1">
+                            <div class="overlay"></div>
+                            <div class="content">
+                                <div class="close-btn-popup" onclick="togglePopup()">&times;
+                                </div>
+                                <h1>The Assignment</h1>
+                                <p>{{ $response['fields']['projectAssignment'] }}</p>
+                            </div>
+                        </div>
+
+                    <a href="#"class="btn btn-primary btn-opties button-popup" onclick="togglePopup()">Project Assigment</a>
+
                 </div>
                 <div class="card card-body card-border card-input-center">
 
-{{--                    //TODO: mail van hz -> ict@hz.nl (miss naar contact pagina)--}}
-                    <a href="#" class="btn btn-primary btn-opties">More information about ict</a>
+{{--                    //TODO: more info of project: linkje bv git--}}
+                        <a  href="#" class="btn btn-primary btn-opties" href="2.html" onclick="location.href=linkje;return false;">Project </a>
+{{--                        <a  href="#" class="btn btn-primary btn-opties" href="{{url('',$respons['fields']['projectURL'])}}">Project </a>--}}
                 </div>
+
+{{--                    //TODO: mail van hz -> ict@hz.nl (miss naar contact pagina)--}}
+
                 <div class="card card-body card-border card-input-center">
-                    <a class="btn btn-primary btn-opties" href="https://hz.nl/opleidingen/hbo-ict" >More information</a>
+                    <a class="btn btn-primary btn-opties" href="https://hz.nl/opleidingen/hbo-ict">ICT program</a>
                 </div>
             </div>
         </div>
@@ -68,8 +108,8 @@
             $('.owl-carousel').owlCarousel({
 
                 number: 3,
-                mouseDrag: false,
-                margin: 25,
+                mouseDrag: true,
+                // margin: 25,
                 dots: false,
                 navText: ["<img class='arrow' src='/img/left-arrow.png' ></i>", "<img class='arrow' src='/img/right-arrow.png'>"],
                 nav: true,
@@ -83,7 +123,6 @@
                 }
             })
         });
-
     </script>
 
 
