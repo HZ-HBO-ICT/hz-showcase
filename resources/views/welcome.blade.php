@@ -8,12 +8,12 @@
     {{--  DONE: Cards clickable maken  --}}
     {{--  DONE: Mobiele integratie van de carousel  --}}
     {{--  DONE: Styling omzetten naar ID's in een aparte scss  --}}
+    {{--  DONE: Routing naar de details (show-functie is opgezet in RequestController --}}
 
-    {{--  TODO: Routing naar de details (show-functie is opgezet in RequestController, helaas nog niet werkend --}}
     {{--  TODO: Design van de kaarten optimaliseren / friendlier voor (andere) schermen maken --}}
     {{--  TODO: Filter function --}}
     {{--  TODO: Tablet integration? --}}
-    {{--  TODO: Tags kleuren geven (amber heeft de code) --}}
+    {{--  TODO: Tags random kleuren geven --}}
 
 
 

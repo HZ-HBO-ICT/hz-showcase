@@ -90,8 +90,7 @@
                 <div class="card card-body card-border card-input-center">
 
 {{--                    //TODO: more info of project: linkje bv git--}}
-                        <a  href="#" class="btn btn-primary btn-opties" href="2.html" onclick="location.href=linkje;return false;">Project </a>
-{{--                        <a  href="#" class="btn btn-primary btn-opties" href="{{url('',$respons['fields']['projectURL'])}}">Project </a>--}}
+                        <a  class="btn btn-primary btn-opties" href="{{ $response['fields']['projectURL'] }}">Project </a>
                 </div>
 
 {{--                    //TODO: mail van hz -> ict@hz.nl (miss naar contact pagina)--}}
