@@ -43,23 +43,29 @@
     <nav class="navbar fixed-bottom">
         <div class="container-fluid">
 
-            <!-- Default dropup button -->
-            <div class="btn-group dropup">
-                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    19/20
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <!-- Dropdown menu links -->
-                    <li><a class="dropdown-item" href="#">14/15</a></li>
-                    <li><a class="dropdown-item" href="#">15/16</a></li>
-                    <li><a class="dropdown-item" href="#">16/17</a></li>
-                    <li><a class="dropdown-item" href="#">17/18</a></li>
-                    <li><a class="dropdown-item" href="#">18/19</a></li>
-                </ul>
-            </div>
+{{--            <!-- Default dropup button -->--}}
+{{--            <div class="btn-group dropup">--}}
+{{--                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">--}}
+{{--                    19/20--}}
+{{--                    <span class="caret"></span>--}}
+{{--                </button>--}}
+{{--                <ul class="dropdown-menu">--}}
+{{--                    <!-- Dropdown menu links -->--}}
+{{--                    <li><a class="dropdown-item" href="#">14/15</a></li>--}}
+{{--                    <li><a class="dropdown-item" href="#">15/16</a></li>--}}
+{{--                    <li><a class="dropdown-item" href="#">16/17</a></li>--}}
+{{--                    <li><a class="dropdown-item" href="#">17/18</a></li>--}}
+{{--                    <li><a class="dropdown-item" href="#">18/19</a></li>--}}
+{{--                </ul>--}}
+{{--            </div>--}}
+
+            <a href="mailto:ict@hz.nl">
+                <span>Contact:</span>
+                <img src="/img/email.png" style="width: 30px; height: 30px">
+            </a>
 
         </div>
+
     </nav>
 </footer>
 </html>
@@ -112,22 +118,26 @@
         <nav class="navbar fixed-bottom">
             <div class="container-fluid">
 
-                <!-- Default dropup button -->
-                <div class="btn-group dropup">
-                    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        19/20
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <!-- Dropdown menu links -->
-                        <li><a class="dropdown-item" href="#">14/15</a></li>
-                        <li><a class="dropdown-item" href="#">15/16</a></li>
-                        <li><a class="dropdown-item" href="#">16/17</a></li>
-                        <li><a class="dropdown-item" href="#">17/18</a></li>
-                        <li><a class="dropdown-item" href="#">18/19</a></li>
+{{--                <!-- Default dropup button -->--}}
+{{--                <div class="btn-group dropup">--}}
+{{--                    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">--}}
+{{--                        19/20--}}
+{{--                        <span class="caret"></span>--}}
+{{--                    </button>--}}
+{{--                    <ul class="dropdown-menu">--}}
+{{--                        <!-- Dropdown menu links -->--}}
+{{--                        <li><a class="dropdown-item" href="#">14/15</a></li>--}}
+{{--                        <li><a class="dropdown-item" href="#">15/16</a></li>--}}
+{{--                        <li><a class="dropdown-item" href="#">16/17</a></li>--}}
+{{--                        <li><a class="dropdown-item" href="#">17/18</a></li>--}}
+{{--                        <li><a class="dropdown-item" href="#">18/19</a></li>--}}
 
-                    </ul>
-                </div>
+{{--                    </ul>--}}
+{{--                </div>--}}
+                <a href="mailto:ict@hz.nl">
+                    <span style="margin-right: 5px">Contact:</span>
+                    <img src="/img/email.png" style="width: 30px; height: 30px">
+                </a>
 
             </div>
 
