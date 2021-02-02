@@ -14,17 +14,8 @@ use app\Http\Controllers\RequestController;
 |
 */
 
-Route::get('/dd', 'RequestController@dd');
+Route::get('/', 'RequestController@index'); // Home-page
 
-//Route::get('/', function () {
-//    return view('welcome', [ 'records' =>  ]);
-//});
+Route::get('/details/{id}', 'RequestController@show'); // Details page
 
-Route::get('/', 'RequestController@index');
-
-
-Route::get('/details/{id}', 'RequestController@show');
-
-//Route::get('details', function () {
-//    return view('details');
-//});
+//Route::get('/dd', 'RequestController@dd'); // Dump & Die page

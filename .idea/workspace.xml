@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63896b6e-cded-4f14-aa07-a0bd0bea38f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RequestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RequestController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/mockup_pictuers.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app-details.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app-details.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,11 +155,16 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\amber\School\HZ_SHOWCASE\hz-showcase" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\marti\Desktop\HZ showcase\resources\views\easter egg" />
+      <recent name="C:\Users\marti\Desktop\HZ showcase\resources\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -181,6 +193,24 @@
       <workItem from="1609148746489" duration="2909000" />
       <workItem from="1609232354426" duration="558000" />
       <workItem from="1609233715645" duration="3000" />
+      <workItem from="1609246771345" duration="7362000" />
+      <workItem from="1609579109867" duration="10372000" />
+      <workItem from="1609591791213" duration="272000" />
+      <workItem from="1609592076795" duration="177000" />
+      <workItem from="1610042216369" duration="6240000" />
+      <workItem from="1610543626978" duration="290000" />
+      <workItem from="1610550686558" duration="74000" />
+      <workItem from="1610560955526" duration="5658000" />
+      <workItem from="1610641790803" duration="5809000" />
+      <workItem from="1610733765014" duration="1053000" />
+      <workItem from="1611221050588" duration="20294000" />
+      <workItem from="1611251507919" duration="79000" />
+      <workItem from="1611253743733" duration="663000" />
+      <workItem from="1611305061231" duration="15167000" />
+      <workItem from="1611323925568" duration="6000" />
+      <workItem from="1611324129810" duration="2083000" />
+      <workItem from="1611784728186" duration="1767000" />
+      <workItem from="1612289873598" duration="2258000" />
     </task>
     <servers />
   </component>
@@ -198,5 +228,15 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/easter egg/troy.blade.php</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

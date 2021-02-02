@@ -32,7 +32,7 @@
                         <p class="card-text" class="description-project">Client: {{ $response['fields']['client'] }}</p>
                         <p class="card-text" style="padding-bottom: -1px">Year: {{ $response['fields']['year'] }}</p>
 
-                        <p class="card-text" class="description-project" style="margin-top: 4px">Uitgevoerd door:</p>
+                        <p class="card-text" class="description-project" style="margin-top: 4px">Written by:</p>
                         <p class="card-text" class="description-project">- {{ $response['fields']['projectMembers'] }} </p>
                     </div>
 
@@ -44,7 +44,7 @@
                             @endforeach
                         </p>
 
-                        <p class="card-text" class="description-project" style="margin-top:5px">Secondairy lables:
+                        <p class="card-text" class="description-project" style="margin-top:5px">Secondary labels:
                             @foreach($response['fields']['secondaryLabel'] as $records)
                                 <span class="label-two">{{ $records }}</span>
                             @endforeach
@@ -153,18 +153,19 @@
                         <p class="card-text" class="description-project">Client: {{ $response['fields']['client'] }}</p>
                         <p class="card-text" style="padding-bottom: -1px">Year: {{ $response['fields']['year'] }}</p>
 
-                        <p class="card-text" class="description-project" style="margin-top: 4px">Uitgevoerd door:</p>
+                        <p class="card-text" class="description-project" style="margin-top: 4px">Written by:</p>
                         <p class="card-text" class="description-project">- {{ $response['fields']['projectMembers'] }} </p>
                     </div>
 
                     <div class="card card-body card-border ">
+                        <h3 class="card-text" >Labels</h3>
                         <p class="card-text" class="description-project" style="margin-top:5px">First labels:
                             @foreach($response['fields']['primaryLabel'] as $records)
                                 <span class="label-one">{{ $records }}</span>
                             @endforeach
                         </p>
 
-                        <p class="card-text" class="description-project" style="margin-top:5px">Secondairy lables:
+                        <p class="card-text" class="description-project" style="margin-top:5px">Secondary labels:
                             @foreach($response['fields']['secondaryLabel'] as $records)
                                 <span class="label-two">{{ $records }}</span>
                             @endforeach
