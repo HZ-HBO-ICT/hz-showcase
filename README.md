@@ -1,61 +1,37 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+Welcome to the hz-showcase wiki!
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## Accounts needed
 
-## About Laravel
+* Github account
+* Airtable account
+* Figma account
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## API Keys
+For development your gonna need your own API key, once you've been added to the airtable you can simply generate it on your account page under "<> API".
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Benodigde software:
+- A code editor that can actually make something of PHP, I used PHPstorm
+- XAMPP, this installs PHP on your machine
+- Composer
 
-## Learning Laravel
+## Issues and assignments
+Can be found under [Issues](https://github.com/HZ-HBO-ICT/hz-showcase/issues)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Software we have used and have been installed into Laravel:
+- Laravel Agent: https://github.com/jenssegers/agent
+- OwlCarousel: https://owlcarousel2.github.io/OwlCarousel2/
+- Bootstrap: https://getbootstrap.com/
+- Airtable, this is mostly their own wiki and isn't really installed, we just made a Controller that handles the requests based on their API. https://airtable.com/
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## How does the app actually work?
+The app makes a HTTP request based on your API key (it does this in RequestController), which contains all the information you need. This whole HTTP request is directly copied from the Airtable documentation. You can then simply call the right path with $response and tada, the information shows up on your page.
 
-## Laravel Sponsors
+The details page is an extra function in RequestController, that scoops up the ID and makes a path called /details/ID. This whole function is based on this laracasts episode: https://laracasts.com/series/laravel-6-from-scratch/episodes/19
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+# Corresponding prototype / wireframes:
+[Figma wireflow](https://www.figma.com/file/4OaCg7FiXaJjkvckXzown4/Showcase-prototype?node-id=0%3A1)
+![Picture](https://cdn.discordapp.com/attachments/714481726629609482/806241701352964146/wireflow_Showcase.PNG)
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## CAUTION
+On Airtable, attachments MUST have something in them, otherwise the app doesn't have anything to pull and will give errors! So make sure tags and photo's have something in them.
